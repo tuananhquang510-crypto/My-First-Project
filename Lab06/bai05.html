@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Đoán số may mắn</h2>
+    <label for="">Người dùng nhập số từ 1 - 10</label>
+    <input id="Somayman" type="number" min="1" max="10">
+    <br><br>
+    <button onclick="doanSo()">Dự đoán</button>
+    <p id="Ketqua"></p>
+
+    <script>
+        function doanSo(){
+            let SoMayMan = document.getElementById("Somayman").value;
+            let SoNgauNhien = Math.floor(Math.random() * 10) + 1;
+            if (SoMayMan == SoNgauNhien){
+                document.getElementById("Ketqua").innerHTML =
+                "Chúc mừng bạn đã đoán đúng số may mắn: " + SoNgauNhien;
+            } else {
+                document.getElementById("Ketqua").innerHTML =
+                "Rất tiếc! Số may mắn là: " + SoNgauNhien + ". Bạn đã đoán sai!";
+            }
+        }
+    </script>
+</body>
+</html>

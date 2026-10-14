@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Máy tính đơn giản</h2>
+    <label for="">Nhập số đầu tiên</label>
+    <input type="number" id="sodautien">
+    <br>
+    <label for="">Nhập số thứ hai</label>
+    <input type="number" id="sothuhai">
+    <br><br>
+    <button onclick="phepCong()">Tính tổng</button>
+    <button onclick="phepTru()">Tính hiệu</button> 
+    <button onclick="phepNhan()">Tính tích</button>
+    <button onclick="phepChia()">Tính thương</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function phepCong(){
+            let soDauTien = document.getElementById("sodautien").value;
+            let soThuHai = document.getElementById("sothuhai").value;
+            let ketQua = Number(soDauTien) + Number(soThuHai);
+            document.getElementById("ketqua").innerHTML = "Kết quả: " + ketQua;
+        }
+
+        function phepTru(){
+            let soDauTien = document.getElementById("sodautien").value;
+            let soThuHai = document.getElementById("sothuhai").value;
+            let ketQua = Number(soDauTien) - Number(soThuHai);
+            document.getElementById("ketqua").innerHTML = "Kết quả: " + ketQua;
+        }
+
+        function phepNhan(){
+            let soDauTien = document.getElementById("sodautien").value;
+            let soThuHai = document.getElementById("sothuhai").value;
+            let ketQua = Number(soDauTien) * Number(soThuHai);
+            document.getElementById("ketqua").innerHTML = "Kết quả: " + ketQua;
+        }
+
+        function phepChia(){
+            let soDauTien = document.getElementById("sodautien").value;
+            let soThuHai = document.getElementById("sothuhai").value;
+            let ketQua = Number(soDauTien) / Number(soThuHai);
+            document.getElementById("ketqua").innerHTML = "Kết quả: " + ketQua;
+        }
+    </script>
+</body>
+</html>

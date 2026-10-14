@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Xếp loại học lực</h2>
+    <label for="">Nhập điểm (0 - 100)</label>
+    <input id="diem" type="number" min="0" max="100">
+    <br><br>
+    <button onclick="xepLoai()">Xếp loại</button>
+    <p id="Ketqua"></p>
+
+    <script>
+        function xepLoai(){
+            let XepLoai = document.getElementById("diem").value;
+            if (XepLoai >= 90 && XepLoai <= 100){
+                document.getElementById("Ketqua").innerHTML =
+                "Xếp loại: A";
+            } else if (XepLoai >= 80 && XepLoai < 90){
+                document.getElementById("Ketqua").innerHTML =
+                "Xếp loại: B";
+            } else if (XepLoai >= 70 && XepLoai < 80){
+                document.getElementById("Ketqua").innerHTML =
+                "Xếp loại: C";
+            } else if (XepLoai >= 60 && XepLoai < 70){
+                document.getElementById("Ketqua").innerHTML =
+                "Xếp loại: D";
+            } else if (XepLoai >= 0 && XepLoai < 60){
+                document.getElementById("Ketqua").innerHTML =
+                "Xếp loại: F";
+            } else {
+                document.getElementById("Ketqua").innerHTML =
+                "Điểm không hợp lệ. Vui lòng nhập lại!";
+            }
+        }
+    </script>
+</body>
+</html>

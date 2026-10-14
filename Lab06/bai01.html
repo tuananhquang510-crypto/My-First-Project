@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Kiểm tra số chẵn - lẻ</h2>
+    <label for="">Nhập số bạn cần kiểm tra</label>
+    <input id="songuyen" type="number">
+    <br><br>
+    <button onclick="kiemTrachanle()">Kiểm tra</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function kiemTrachanle(){
+            let Songuyen = document.getElementById("songuyen").value;
+            let Ketqua = Songuyen % 2
+            if (Ketqua == 0){
+                document.getElementById("ketqua").innerHTML =
+                Songuyen + " là số chẵn";
+            } else {
+                document.getElementById("ketqua").innerHTML =
+                Songuyen + " là số lẻ";
+            }
+        }
+    </script>
+</body>
+</html>
