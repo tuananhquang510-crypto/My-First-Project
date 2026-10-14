@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Oán tù tì</h2>
+    <p>Mời bạn chọn</p>
+    <button onclick="oanTuti('bua')">Búa</button>
+    <button onclick="oanTuti('keo')">Kéo</button>
+    <button onclick="oanTuti('bao')">Bao</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function oanTuti(userChoice){
+            let choices = ['bua', 'keo', 'bao'];
+            let randomIndex = Math.floor(Math.random() * 3);
+            let computerChoice = choices[randomIndex];
+
+            if (userChoice === computerChoice) {
+                document.getElementById("ketqua").innerHTML = "Hòa! Cả hai đều chọn " + userChoice;
+            } else if (
+                (userChoice === 'bua' && computerChoice === 'keo') ||
+                (userChoice === 'keo' && computerChoice === 'bao') ||
+                (userChoice === 'bao' && computerChoice === 'bua')
+            ) {
+                document.getElementById("ketqua").innerHTML = "Bạn thắng! Bạn chọn " + userChoice + ", máy chọn " + computerChoice;
+            } else {
+                document.getElementById("ketqua").innerHTML = "Bạn thua! Bạn chọn " + userChoice + ", máy chọn " + computerChoice;
+            }
+        }
+    </script>
+</body>
+</html>
